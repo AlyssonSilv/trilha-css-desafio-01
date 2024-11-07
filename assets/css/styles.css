@@ -1,7 +1,7 @@
 @import url('reset.css');
 
 body {
-  background-color: black;
+  background: linear-gradient(135deg, #1e1e1e, #101010);
 }
 
 h2 {
@@ -29,6 +29,7 @@ section {
   height: 600px;
   padding-top: 70px;
   border-bottom: 1px solid #33A8DB80;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .banner .banner-content {
@@ -36,6 +37,7 @@ section {
   width: 600px;
   margin: auto;
   text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .banner h1 {
@@ -68,6 +70,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  filter: drop-shadow(0 0 10px #33A8DB);
 }
 
 .banner .banner-content button {
@@ -81,6 +84,13 @@ section {
   border-image: linear-gradient(#3BA1CD, #1572B7);
   border-image-slice: 10;
   border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.banner .banner-content button:hover {
+  background-color: #31A8DD;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 #course-content {
@@ -100,7 +110,7 @@ section {
   background-color: #252525;
   padding: 16px;
   border-radius: 100px;
-  box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 #course-content .modules-list .module span {
@@ -149,4 +159,35 @@ footer a {
   color: #33A8DB;
   font-weight: bold;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #1472B7;
+  text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  section {
+    margin: 50px auto;
+  }
+  .banner .banner-content {
+    width: 90%;
+  }
+  #course-content {
+    width: 100%;
+  }
+}
+
+/* Keyframes for animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
