@@ -167,7 +167,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Media queries for responsiveness */
+
 @media (max-width: 768px) {
   section {
     margin: 50px auto;
@@ -180,7 +180,7 @@ footer a:hover {
   }
 }
 
-/* Keyframes for animation */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
